@@ -1,3 +1,5 @@
+% fib.pl
+
 :- dynamic fib/2.
 
 fib(0, 0).
