@@ -10,3 +10,15 @@ fib(N, F) :-
 	fib(N2, F2),
 	F is F1+F2,
 	asserta(fib(N, F)).
+
+fib(0).
+fib(1).
+fib(X) :-
+	fib(0, 1, X).
+
+fib(A, B, X) :-
+	S is A + B,
+	(   X = S
+	;   fib(B, S, X)).
+
+
