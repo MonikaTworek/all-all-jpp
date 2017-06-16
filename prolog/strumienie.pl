@@ -3,14 +3,7 @@
 main(N) :-
 	drukowanie(S1),
 	podwajanie(S2, S1),
-	gen(1, N, S2).
-
-gen(I, N, OUT) :-
-	(   I =< N
-	->  OUT = [I | OUT_],
-	    I1 is I + 1,
-	    gen(I1, N, OUT_)
-	;   OUT = []).
+	numlist(1, N, S2).
 
 podwajanie(IN, OUT) :-
 	freeze(IN,
